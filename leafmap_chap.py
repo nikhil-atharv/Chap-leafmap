@@ -1,5 +1,3 @@
-!pip install leafmap localtileserver xarray-spatial rioxarray xarray rasterio geopandas pandas mapclassify planetary-computer pystac-client stackstac
-
 import leafmap.folium as leafmap
 
 import geopandas
@@ -54,5 +52,6 @@ m.add_basemap("HYBRID")
 m.add_raster(raster)
 
 m.to_streamlit()
+
 
 
