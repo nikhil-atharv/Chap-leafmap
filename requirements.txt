@@ -18,3 +18,4 @@ Pillow
 rasterstats
 folium
 xarray-spatial
+stackstac
