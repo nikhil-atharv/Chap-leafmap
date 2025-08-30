@@ -9,3 +9,4 @@ xarray-spatial
 pystac-client
 planetary-computer
 os
+stackstac
