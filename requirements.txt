@@ -16,3 +16,5 @@ leafmap
 localtileserver
 Pillow
 rasterstats
+folium
+xarray-spatial
