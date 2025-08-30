@@ -1,4 +1,5 @@
 leafmap
+folium
 localtileserver
 geopandas
 pandas
