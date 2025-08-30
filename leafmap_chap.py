@@ -1,4 +1,4 @@
-import leafmap as leafmap
+import leafmap.folium as leafmap
 
 import geopandas
 import os
@@ -52,3 +52,4 @@ m.add_basemap("HYBRID")
 m.add_raster(raster)
 
 m.to_streamlit()
+
