@@ -1,8 +1,7 @@
-import leafmap.foliumap as leafmap
-
 import geopandas
+import os
 
-gpd_file_path = 'Boundary.gpkg'
+gpd_file_path = ('Boundary.gpkg')
 
 boundary = geopandas.read_file(gpd_file_path)
 roi = boundary.geometry
@@ -27,6 +26,7 @@ search = catalog.search(
 
 items = search.get_all_items()
 selected_image = items[0]
+selected_image
 
 import xrspatial
 import rioxarray
@@ -38,19 +38,11 @@ stacked = stackstac.stack(selected_image, epsg=4326)
 clipped = stacked.rio.clip(roi)
 clipped_med = clipped.median('time', keep_attrs=True)
 clipped2 = clipped_med.sel(band = ['B01'])
-clipped2.rio.to_raster('clipped_chap.tif')
 
-import folium
 import localtileserver
+import leafmap.foliumap as leafmap
 
 m = leafmap.Map()
-m.add_basemap("HYBRID")
-
+m.add_basemap('HYBRID')
 m.add_raster(clipped2)
-
-m.to_streamlit()
-
-
-
-
-
+m
