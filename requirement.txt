@@ -1,0 +1,11 @@
+leafmap
+localtileserver
+geopandas
+pandas
+rasterio
+rioxarray
+xarray
+xarray-spatial
+pystac-client
+planetary-computer
+os
